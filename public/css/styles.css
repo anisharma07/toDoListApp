@@ -1,8 +1,12 @@
 html {
-  background-color: #E4E9FD;
-  background-image: linear-gradient(to top, #d16ba5 25%, #c777b9 50%, #ba83ca 75%, #aa8fd8);
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 50%, #9599E2 25%);
+  background-repeat: no repeat;
+  background-attachment: fixed;
+  background-position: center;
   min-height: 1000px;
   font-family: 'helvetica neue';
+  font-weight: bold;
 }
 
 h1 {
@@ -11,9 +15,9 @@ h1 {
 }
 
 .box {
-  max-width: 650px;
-  margin: 50px auto;
-  background: white;
+  max-width: 100%;
+  margin: 70px auto;
+  background: transparent;
   border-radius: 5px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -25,11 +29,20 @@ h1 {
   text-align: center;
 }
 
+.check {
+  outline: 2px solid black;
+  height: 150px;
+}
+
 .item {
-  min-height: 70px;
+  background-color: white;
+  border-bottom: 2px solid black;
+  margin: 11px;
+  min-height: 100px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #F1F1F1;
+  border-bottom: 2px solid black;
+
 }
 
 .item:last-child {
@@ -47,9 +60,9 @@ input[type="checkbox"] {
 
 p {
   margin: 0;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: 200;
+  padding: 30px;
+  font-size: 40px;
+  font-weight: 300;
   color: #00204a;
 }
 
@@ -95,76 +108,4 @@ footer {
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
-}
-
-
-/************
-
-media queries
-
-
-
-
-***********/
-
-/* Common styles */
-
-/* For screens up to 350px width */
-@media (max-width: 350px) {
-  .box {
-    max-width: 90%;
-    margin: 20px auto;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  input[type="text"] {
-    width: 80%;
-  }
-}
-
-/* For screens from 351px to 576px width */
-@media (min-width: 351px) and (max-width: 576px) {
-  .box {
-    max-width: 85%;
-    margin: 30px auto;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  p {
-    font-size: 18px;
-  }
-
-  input[type="text"] {
-    width: 70%;
-  }
-}
-
-/* For screens from 577px to 789px width */
-@media (min-width: 577px) and (max-width: 789px) {
-  .box {
-    max-width: 80%;
-    margin: 40px auto;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  p {
-    font-size: 20px;
-  }
-
-  input[type="text"] {
-    width: 60%;
-  }
 }

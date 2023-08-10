@@ -2,4 +2,5 @@
 npm-debug.log
 .DS_Store
 deleted.txt
+index.html
 /*.env

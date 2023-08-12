@@ -1,48 +1,51 @@
 html {
   background-color: #8BC6EC;
   background-image: linear-gradient(135deg, #8BC6EC 50%, #9599E2 25%);
-  background-repeat: no repeat;
-  background-attachment: fixed;
-  background-position: center;
   min-height: 1000px;
   font-family: 'helvetica neue';
-  font-weight: bold;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  min-height: 95vh;
 }
 
 h1 {
-  color: #cb5b00;
-  padding: 10px;
+  color: #fff;
+  padding: 45px;
+  font-size: 70px;
+}
+
+main {
+  text-align: center;
+  flex: 1 0 auto;
 }
 
 .box {
-  max-width: 100%;
-  margin: 70px auto;
-  background: transparent;
+  width: 100%;
+  margin: 50px auto;
+  background: white;
   border-radius: 5px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
+
 }
 
 #heading {
-  background-color: white;
+  background-color: #9599E2;
   text-align: center;
 }
 
 .check {
-  outline: 2px solid black;
-  height: 150px;
+  height: 200px;
 }
 
 .item {
-  background-color: white;
-  border-bottom: 2px solid black;
-  margin: 11px;
-  min-height: 100px;
+  min-height: 70px;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid black;
-
+  border-bottom: 1px solid #F1F1F1;
 }
 
 .item:last-child {
@@ -51,52 +54,57 @@ h1 {
 
 input:checked+p {
   text-decoration: line-through;
-  text-decoration-color: #cb5b00;
+  text-decoration-color: #9599E2;
 }
 
 input[type="checkbox"] {
-  margin: 20px;
+  margin: 21px;
+  height: 45px;
+  width: 45px;
 }
 
 p {
   margin: 0;
-  padding: 30px;
-  font-size: 40px;
-  font-weight: 300;
+  padding: 20px;
+  font-size: 60px;
+  font-weight: 400;
   color: #00204a;
 }
 
-form.item {
+form {
   text-align: center;
+}
+
+#submitBtn {
   margin-left: 20px;
 }
 
 button {
-  min-height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #cb5b00;
+  background-color: #9599E2;
   color: #fff;
-  font-size: 30px;
+  font-size: 70px;
   padding-bottom: 6px;
   border-width: 0;
 }
 
 input[type="text"] {
   text-align: center;
-  height: 60px;
+  height: 150px;
   top: 10px;
   border: none;
   background: transparent;
-  font-size: 20px;
-  font-weight: 200;
-  width: 313px;
+  font-size: 70px;
+  font-weight: 400;
+  width: 739px;
 }
 
 input[type="text"]:focus {
   outline: none;
-  box-shadow: inset 0 -3px 0 0 #cb5b00;
+  box-shadow: inset 0 -3px 0 0 #9599E2;
 }
 
 ::placeholder {

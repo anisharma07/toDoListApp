@@ -1,34 +1,53 @@
-<%- include("header") -%>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-  <div class="box" id="heading">
-    <h1>
-      <%= listTitle %>
-    </h1>
-  </div>
+<head>
+  <meta charset="utf-8">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
 
-  <div class="box">
+<body>
 
-    <%newListItems.forEach(function(item){%>
-      <form action="/delete" method="post">
-        <div class="item">
+  <main>
+
+    <div class="box" id="heading">
+      <h1>
+        <%= listTitle %>
+      </h1>
+    </div>
+
+    <div class="box">
+
+      <%newListItems.forEach(function(item){%>
+
+        <form class="item check" action="/delete" method="post">
+          <!-- <div class="item check"> -->
           <input type="checkbox" name="checkbox" value="<%=item._id%>" onChange="this.form.submit()">
           <p>
             <%= item.name %>
           </p>
+          <!-- </div> -->
           <input type="hidden" name="listName" value="<%=listTitle%>">
           </input>
-        </div>
-      </form>
-
-      <% }) %>
-
-
-
-        <form class="item" action="/" method="post">
-          <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-          <button type="submit" name="list" value="<%=listTitle%>">+</button>
+          <!-- </div> -->
         </form>
 
-  </div>
+        <% }) %>
 
-  <%- include("footer") -%>
+          <form class="item" id="submitBtn" action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="list" value="<%=listTitle%>">+</button>
+          </form>
+
+    </div>
+  </main>
+
+  <footer>
+    Copyright | 2023 | All rights reserved
+  </footer>
+
+</body>
+
+</html>
